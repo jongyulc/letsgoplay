@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보 처리방침 · Let's Go Play</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --blue: #3B82F6;
+    --blue-dark: #1D4ED8;
+    --bg: #F0F4FF;
+    --white: #ffffff;
+    --gray-900: #111827;
+    --gray-700: #374151;
+    --gray-500: #6B7280;
+    --gray-200: #E5E7EB;
+    --radius: 20px;
+  }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--gray-700);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  header {
+    background: linear-gradient(135deg, #1E40AF, #3B82F6);
+    padding: 40px 24px 32px;
+    text-align: center;
+    color: white;
+  }
+  .logo {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: -0.3px;
+  }
+  header p {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    font-weight: 600;
+  }
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+  }
+  .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .card h2 {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--blue-dark);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .card h2 .num {
+    background: var(--blue);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .card p {
+    font-size: 14px;
+    color: var(--gray-700);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .card ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  .card ul li {
+    font-size: 14px;
+    color: var(--gray-700);
+    font-weight: 600;
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  .card ul li::before {
+    content: '•';
+    color: var(--blue);
+    position: absolute;
+    left: 6px;
+    font-weight: 900;
+  }
+  .highlight {
+    background: #EFF6FF;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1D4ED8;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  .contact-card {
+    background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .contact-card h2 {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--blue-dark);
+    margin-bottom: 8px;
+  }
+  .contact-card a {
+    color: var(--blue);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .date-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--gray-500);
+    font-weight: 600;
+    margin-top: 8px;
+  }
+  /* English version */
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  .lang-btn {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 2px solid var(--blue);
+    background: transparent;
+    color: var(--blue);
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .lang-btn.active {
+    background: var(--blue);
+    color: white;
+  }
+  .ko-content, .en-content { display: block; }
+  .en-content { display: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🛝</div>
+  <h1>개인정보 처리방침 · Privacy Policy</h1>
+  <p>Let's Go Play — Calgary Playground Finder</p>
+</header>
+
+<div class="container">
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('ko', this)">한국어</button>
+    <button class="lang-btn" onclick="setLang('en', this)">English</button>
+  </div>
+
+  <!-- 한국어 -->
+  <div class="ko-content">
+    <div class="card">
+      <h2><span class="num">1</span> 수집하는 개인정보</h2>
+      <ul>
+        <li>이메일 주소 (회원가입 시)</li>
+        <li>닉네임 (선택사항)</li>
+        <li>위치 정보 (앱 사용 중, 주변 놀이터 검색용)</li>
+        <li>방문 기록 및 저장한 놀이터 목록</li>
+      </ul>
+      <div class="highlight">위치 정보는 기기에서만 처리되며 서버에 저장되지 않습니다.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">2</span> 개인정보 이용 목적</h2>
+      <ul>
+        <li>놀이터 추천 및 날씨 기반 점수 제공</li>
+        <li>저장한 놀이터 및 방문 기록 관리</li>
+        <li>서비스 개선 및 버그 수정</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">3</span> 제3자 제공</h2>
+      <p>수집된 개인정보는 제3자에게 제공하거나 판매하지 않습니다.</p>
+      <p>단, 다음 서비스를 사용합니다:</p>
+      <ul>
+        <li>Supabase — 인증 및 데이터 저장 (캐나다 서버)</li>
+        <li>Google Maps — 지도 서비스</li>
+        <li>Open-Meteo — 날씨 데이터 (개인정보 미전송)</li>
+        <li>Google AdMob — 광고 서비스</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">4</span> 보유 및 삭제</h2>
+      <p>회원 탈퇴 시 모든 개인정보는 즉시 삭제됩니다.</p>
+      <p>앱 설정 → 마이페이지 → 회원 탈퇴에서 직접 삭제할 수 있습니다.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">5</span> 아동 개인정보</h2>
+      <p>본 앱은 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 13세 미만은 보호자의 지도 하에 사용해주세요.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">6</span> 광고</h2>
+      <p>Google AdMob을 통해 광고가 표시될 수 있습니다. AdMob의 개인정보 처리방침은 <a href="https://policies.google.com/privacy" style="color: var(--blue);">Google 정책 페이지</a>에서 확인하실 수 있습니다.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>📬 문의</h2>
+      <p style="font-size:13px; color: var(--gray-700); font-weight:600; margin-bottom:8px;">개인정보 관련 문의사항이 있으시면 아래로 연락해주세요.</p>
+      <a href="mailto:jleelab.dev@gmail.com">jleelab.dev@gmail.com</a>
+    </div>
+
+    <p class="date-note">시행일: 2025년 1월 1일 · 최종 수정: 2025년 5월</p>
+  </div>
+
+  <!-- English -->
+  <div class="en-content">
+    <div class="card">
+      <h2><span class="num">1</span> Information We Collect</h2>
+      <ul>
+        <li>Email address (when creating an account)</li>
+        <li>Nickname (optional)</li>
+        <li>Location data (while using the app, for nearby playground search)</li>
+        <li>Visit history and saved playground lists</li>
+      </ul>
+      <div class="highlight">Location data is processed on-device only and is not stored on our servers.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">2</span> How We Use Your Information</h2>
+      <ul>
+        <li>Providing playground recommendations and weather-based scores</li>
+        <li>Managing saved playgrounds and visit history</li>
+        <li>Improving the service and fixing bugs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">3</span> Third-Party Services</h2>
+      <p>We do not sell or share your personal data with third parties.</p>
+      <p>We use the following services:</p>
+      <ul>
+        <li>Supabase — Authentication and data storage (Canadian servers)</li>
+        <li>Google Maps — Map service</li>
+        <li>Open-Meteo — Weather data (no personal data transmitted)</li>
+        <li>Google AdMob — Advertising service</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">4</span> Data Retention & Deletion</h2>
+      <p>All personal data is immediately deleted upon account deletion.</p>
+      <p>You can delete your account directly from: App → My Page → Delete Account.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">5</span> Children's Privacy</h2>
+      <p>This app does not intentionally collect personal information from children under 13. Children under 13 should use this app under parental supervision.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">6</span> Advertising</h2>
+      <p>Ads may be displayed via Google AdMob. Please refer to <a href="https://policies.google.com/privacy" style="color: var(--blue);">Google's Privacy Policy</a> for more information.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>📬 Contact</h2>
+      <p style="font-size:13px; color: var(--gray-700); font-weight:600; margin-bottom:8px;">For any privacy-related inquiries, please contact us at:</p>
+      <a href="mailto:jleelab.dev@gmail.com">jleelab.dev@gmail.com</a>
+    </div>
+
+    <p class="date-note">Effective: January 1, 2025 · Last updated: May 2025</p>
+  </div>
+
+</div>
+
+<script>
+function setLang(lang, btn) {
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelector('.ko-content').style.display = lang === 'ko' ? 'block' : 'none';
+  document.querySelector('.en-content').style.display = lang === 'en' ? 'block' : 'none';
+}
+</script>
+</body>
+</html>
