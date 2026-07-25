@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Let's Go Play — Email Confirmed</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --blue:#3B82F6;--blue-dark:#1D4ED8;--sky:#0EA5E9;
+    --green:#22C55E;--green-dark:#16A34A;--green-bg:#DCFCE7;
+    --gray-900:#111827;--gray-500:#6B7280;--gray-300:#D1D5DB;
+  }
+  html,body{height:100%;}
+  body{
+    font-family:'Nunito','Noto Sans KR',sans-serif;
+    background:linear-gradient(160deg,#EFF6FF 0%,#DBEAFE 45%,#E0F2FE 100%);
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .card{
+    width:100%;max-width:380px;
+    background:#fff;border-radius:28px;
+    padding:40px 32px 36px;
+    box-shadow:0 20px 50px rgba(59,130,246,.16),0 2px 8px rgba(0,0,0,.04);
+    text-align:center;
+    animation:cardIn .5s cubic-bezier(.22,1,.36,1) both;
+  }
+  @keyframes cardIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+  .brand-icon{
+    width:64px;height:64px;border-radius:20px;margin:0 auto 20px;
+    background:linear-gradient(135deg,#38BDF8,#3B82F6);
+    display:flex;align-items:center;justify-content:center;font-size:32px;
+    box-shadow:0 10px 26px rgba(59,130,246,.35);
+    animation:bounce 2.4s ease-in-out .6s infinite;
+  }
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+
+  .check-badge{
+    width:34px;height:34px;border-radius:50%;
+    background:var(--green);
+    display:flex;align-items:center;justify-content:center;
+    margin:-38px 0 18px auto;position:relative;left:calc(50% + 14px);
+    box-shadow:0 4px 10px rgba(34,197,94,.4),0 0 0 4px #fff;
+  }
+  .check-badge svg{width:18px;height:18px;stroke:#fff;stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+
+  h1{
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:22px;font-weight:900;color:var(--gray-900);
+    letter-spacing:-.3px;line-height:1.3;
+  }
+  .body-primary{
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:14px;font-weight:500;color:var(--gray-500);
+    margin-top:10px;line-height:1.6;
+  }
+  .divider{
+    width:32px;height:1px;background:var(--gray-300);
+    margin:22px auto;
+  }
+  .body-secondary{
+    font-size:12.5px;font-weight:600;color:var(--gray-500);
+    line-height:1.6;
+  }
+  .tip{
+    margin-top:24px;padding:12px 16px;background:#F0F9FF;border-radius:14px;
+    font-family:'Noto Sans KR',sans-serif;
+    font-size:11.5px;font-weight:700;color:var(--blue-dark);
+    line-height:1.5;
+  }
+  .footer{
+    margin-top:26px;font-size:10px;font-weight:700;color:var(--gray-300);
+    letter-spacing:.04em;text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand-icon">🛝</div>
+    <div class="check-badge">
+      <svg viewBox="0 0 24 24"><polyline points="4,13 9,18 20,6"/></svg>
+    </div>
+    <h1>Email Confirmed!</h1>
+    <p class="body-primary">Please return to the app<br>and log in.</p>
+    <div class="divider"></div>
+    <p class="body-secondary" lang="ko">이메일 인증이 완료됐어요.<br>앱으로 돌아가서 로그인해주세요.</p>
+    <div class="tip">💡 You can close this window now</div>
+    <div class="footer">Let's Go Play</div>
+  </div>
+</body>
+</html>
